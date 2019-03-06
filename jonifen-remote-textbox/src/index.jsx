@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default class Textbox extends React.Component {
+class TextboxComponent extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <input type="text" onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} />
+      <input type="text" onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} name={this.props.name} />
     );
   }
 
@@ -21,3 +21,5 @@ export default class Textbox extends React.Component {
       this.props.onBlur(e);
   }
 }
+
+export const Textbox = prop => new TextboxComponent(prop);
