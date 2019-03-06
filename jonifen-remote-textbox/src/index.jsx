@@ -22,4 +22,4 @@ class TextboxComponent extends React.Component {
   }
 }
 
-export const Textbox = prop => new TextboxComponent(prop);
+export const Textbox = props => new TextboxComponent(props);

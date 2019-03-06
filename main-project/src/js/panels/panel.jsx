@@ -1,4 +1,5 @@
 import React from 'react';
+import ComponentProxy from '../component-proxy.jsx';
 
 export default class Panel extends React.Component {
   constructor(props) {
@@ -15,11 +16,14 @@ export default class Panel extends React.Component {
     return (
       <div>
         textbox to go here
-        <window.Jonifen.Textbox name="textValue" value={this.state.textValue} onChange={this._textBoxOnChange} />
+        <window.JonifenTextbox.Textbox name="textValue" value={this.state.textValue} onChange={this._textBoxOnChange} />
         <br />
-        <window.Jonifen.Textbox name="textValueTwo" value={this.state.textValueTwo} onChange={this._textBoxOnChange} />
+        <window.JonifenTextbox.Textbox name="textValueTwo" value={this.state.textValueTwo} onChange={this._textBoxOnChange} />
         <br />
         <input type="text" name="fred" value={this.state.fred} onChange={this._textBoxOnChange} />
+        <br />
+        <window.JonifenDropdown.Dropdown />
+        <ComponentProxy proxy="dropdown" />
       </div>
     );
   }

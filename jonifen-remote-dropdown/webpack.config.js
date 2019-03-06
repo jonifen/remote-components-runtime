@@ -4,9 +4,9 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'js/textbox.umd.js',
+    filename: 'js/dropdown.umd.js',
     libraryTarget: 'umd',
-    library: 'JonifenTextbox',
+    library: 'JonifenDropdown',
     umdNamedDefine: true
   },
   module: {
