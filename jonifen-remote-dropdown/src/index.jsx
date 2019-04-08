@@ -12,4 +12,4 @@ class DropdownComponent extends React.Component {
   }
 }
 
-export const Dropdown = props => new DropdownComponent(props);
+export const Component = props => new DropdownComponent(props);

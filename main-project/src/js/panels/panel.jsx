@@ -4,31 +4,31 @@ import ComponentProxy from '../component-proxy.jsx';
 export default class Panel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      textValue: "",
-      textValueTwo: "",
-      fred: ""
-    };
+    this.state = {};
     this._textBoxOnChange = this._textBoxOnChange.bind(this);
   }
 
   render() {
     return (
       <div>
-        textbox to go here
-        <window.JonifenTextbox.Textbox name="textValue" value={this.state.textValue} onChange={this._textBoxOnChange} />
-        <br />
-        <window.JonifenTextbox.Textbox name="textValueTwo" value={this.state.textValueTwo} onChange={this._textBoxOnChange} />
-        <br />
-        <input type="text" name="fred" value={this.state.fred} onChange={this._textBoxOnChange} />
-        <br />
-        <window.JonifenDropdown.Dropdown />
-        <ComponentProxy proxy="dropdown" />
+        <ComponentProxy type="dropdown" name="jonifenTest" props={{name: "fred"}}>
+          Loading...
+        </ComponentProxy>
+        <ComponentProxy type="textbox" name="jonifenText" props={{value: this.state.jonifenText, onChange: this._textBoxOnChange}}>
+          Loading...
+        </ComponentProxy>
+        <ComponentProxy type="textbox" name="jonifenText2" props={{value: this.state.jonifenText2, onChange: this._textBoxOnChange}}>
+          Loading...
+        </ComponentProxy>
+        <ComponentProxy type="textbox" name="jonifenText3" props={{value: this.state.jonifenText3, onChange: this._textBoxOnChange}}>
+          Loading...
+        </ComponentProxy>
       </div>
     );
   }
 
   _textBoxOnChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+    // this.setState({ textValue: e.target.value });
   }
 }

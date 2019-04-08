@@ -1,0 +1,38 @@
+{
+  "name": "remote-components-runtime",
+  "version": "1.0.0",
+  "description": "PoC to see if it's possible to pull in JS components from a remote location at runtime within a React project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --port 9000 --inline --no-info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonifen/remote-components-runtime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonifen/remote-components-runtime/issues"
+  },
+  "homepage": "https://github.com/jonifen/remote-components-runtime#readme",
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "requirejs": "^2.3.6",
+    "scriptjs": "^2.5.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
