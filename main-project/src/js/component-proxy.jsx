@@ -17,7 +17,6 @@ export default class ComponentProxy extends React.Component {
   }
 
   componentDidMount() {
-    window.React = React;
     let componentData = this.components[this.props.type];
 
     ScriptJs(componentData.url, () => {
